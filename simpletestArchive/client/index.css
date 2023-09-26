@@ -1,0 +1,54 @@
+
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+   
+}
+
+.client-section {
+
+    background-color: #081B4B;
+    color: white;
+
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+#connection-status-section {
+    
+    display: flex;
+    column-gap: 20px;
+}
+
+.line-section {
+    
+    display: flex;
+    column-gap: 20px;
+}
+
+.value-label {
+    color: #00C6FF;
+    font-weight: bold;
+}
+
+#message-textbox {
+    width: 250px;
+}
+
+.action-button {
+    background-color: white;
+    color: #081B4B;
+    border: 0px solid black;
+    border-radius: 10px;
+}
+
+.action-button:hover {
+    background-color: #4994FF; /* Green */
+    color: white;
+  }
+
+
+
+

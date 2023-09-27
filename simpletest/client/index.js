@@ -108,9 +108,5 @@ function setEventHandlers() {
 }
   
 
-function logKey(e) {
-    console.log(e.code);
-  }
-
 window.addEventListener("load", init, false);
 

@@ -85,7 +85,6 @@ function displayMessage(message, textColor) {
 
 function setEventHandlers() {
 
-
     connectionStateLabel = document.getElementById("connection-state");
     messageLabel = document.getElementById("message-display");
 
@@ -98,9 +97,20 @@ function setEventHandlers() {
         toSevermessageText.value = "";
     };
 
+    toSevermessageText.addEventListener("keydown", (e) => {  
+        if (e.code === 'Enter') {
+            doSend(toSevermessageText.value); 
+            toSevermessageText.value = "";
+        }
+       }
+    );
 
 }
   
+
+function logKey(e) {
+    console.log(e.code);
+  }
 
 window.addEventListener("load", init, false);
 

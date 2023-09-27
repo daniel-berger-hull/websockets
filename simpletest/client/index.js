@@ -19,9 +19,7 @@ const CONNECTED    = CONNECTION_STATES[1];
   
 function init() {
  
-
    setEventHandlers();
-
    initWebSocket();
 }
   
@@ -43,7 +41,7 @@ function initWebSocket() {
   
 function onOpen(evt) {
     displayConnectionLabelState( CONNECTED );
-    doSend("WebSocket rocks"); 
+    doSend("Initiation of  WebSocket on client completed!"); 
 }
   
 function onClose(evt) {
@@ -51,14 +49,12 @@ function onClose(evt) {
 }
   
 function onError(evt) {
-    //displayMessage('<span style = "color: red;">ERROR:</span> ' + evt.data);
     displayMessage('ERROR: ' + evt.data, "red");
-    
 } 
   
 function doSend(message) {
-    displayMessage("SENT: " + message); 
-    
+    //displayMessage(message); 
+    console.log(`Sending to Server: ${message}`);
     websocket.send(message);
 }
   
@@ -95,10 +91,6 @@ function setEventHandlers() {
 
     toSevermessageText = document.getElementById("to-server-msg-textbox");
     fromSevermessageText  = document.getElementById("from-server-msg-textbox");
-
-
-    
-
 
     const sendMsgButton = document.getElementById("send-msg-button");
     sendMsgButton.onclick = function(){  
